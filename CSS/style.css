@@ -1,0 +1,83 @@
+/* Setup */
+
+
+/* Main */
+#header {
+    height: 46.5px;
+    background-color: #000;
+}
+
+#header #nav {
+    display: inline-block;
+}
+
+#header li {
+    display: inline-block;
+    position: relative;
+}
+
+#header li a {
+    text-decoration: none;
+    color: #fff;
+    line-height: 46.5px;
+    padding: 0 24px;
+    display: inline-block;
+}
+
+#header li:hover > a {
+    background-color: #ccc;
+    color: #000;
+}
+
+#header .subnav {
+    position: absolute;
+    background-color: #fff;
+    width: 160px;
+    display: none;
+}
+
+#header li:hover .subnav {
+    display: block;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+#header .subnav li {
+    display: block;
+}
+
+#header .subnav a {
+    line-height: 38.5px;
+    color: #000;
+    padding: 0 16px;
+    display: block;
+}
+
+/* #header li:hover .subnav {
+    display: block;
+} */
+
+#header > i {
+    line-height: 46.5px;
+    padding: 0 24px;
+    position: absolute;
+    right: 0;
+    color: #fff;
+    display: inline-block;
+}
+
+#header > i:hover {
+    background-color: #f44336;
+}
+
+#slider {
+    height: 500px;
+    /* background-color: darkgrey; */
+}
+
+#body {
+
+}
+
+#footer {
+
+}
