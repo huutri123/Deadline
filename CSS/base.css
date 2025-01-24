@@ -7,3 +7,19 @@
 html {
     font-family: "Lato", sans-serif;
 }
+
+.margin-content {
+    margin: 0 15pc;
+}
+
+.padding-content {
+    padding: 0 15pc;
+}
+
+.col2 {
+    width: 50%;
+}
+
+.col3 {
+
+}

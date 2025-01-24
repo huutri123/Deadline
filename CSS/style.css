@@ -1,83 +1,157 @@
-/* Setup */
-
-
-/* Main */
+/* ANCHOR Header */
 #header {
-    height: 46.5px;
-    background-color: #000;
-}
-
-#header #nav {
-    display: inline-block;
-}
-
-#header li {
-    display: inline-block;
+    /* background-color: rgba(7, 97, 125, .2);    #04647c */
+    transition: 0.3s ease-in-out, transform 0.3s ease-in-out;
     position: relative;
+    position: fixed;
+    display: flex;
+    height: 100px;
+    width: 100%;
+    z-index: 2;
+    top: 0;
 }
 
-#header li a {
-    text-decoration: none;
-    color: #fff;
-    line-height: 46.5px;
-    padding: 0 24px;
-    display: inline-block;
+#header .logo {
+    margin-left: 15pc;
+    cursor: pointer;
 }
 
-#header li:hover > a {
-    background-color: #ccc;
-    color: #000;
-}
-
-#header .subnav {
+#nav {
+    margin-right: 15pc;
     position: absolute;
-    background-color: #fff;
-    width: 160px;
-    display: none;
-}
-
-#header li:hover .subnav {
-    display: block;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-}
-
-#header .subnav li {
-    display: block;
-}
-
-#header .subnav a {
-    line-height: 38.5px;
-    color: #000;
-    padding: 0 16px;
-    display: block;
-}
-
-/* #header li:hover .subnav {
-    display: block;
-} */
-
-#header > i {
-    line-height: 46.5px;
-    padding: 0 24px;
-    position: absolute;
+    font-size: 0;
     right: 0;
-    color: #fff;
+}
+
+#nav li {
     display: inline-block;
+    list-style: none;
+    padding: 0 20px;
 }
 
-#header > i:hover {
-    background-color: #f44336;
+#nav li:hover {
+    
 }
 
+#nav li a {
+    text-decoration: none;
+    line-height: 100px;
+    color: #faaa2c;
+    font-size: 20px;
+}
+
+#nav li:hover a {
+    color: #04647c;
+}
+
+#nav li,
+#nav li a {
+    transition: 0.3s;
+}
+
+/* ANCHOR Slider */
 #slider {
-    height: 500px;
-    /* background-color: darkgrey; */
+    width: 100%;
+    height: 48vw;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-image: url(../Image/TQTCrew.jpg);
 }
 
-#body {
+#slider::after {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+}
 
+#slider .slider-content {
+    position: absolute;
+    z-index: 20;
+    color: #fff;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+}
+
+#slider img {
+    object-fit: contain;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    /* background-color: #222629;    */    
+}
+
+#slider .opacity-container {
+    /* position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%; */
+    /* background-color: rgba(0,0,0,.5); */
+}
+
+/* ANCHOR Body */
+#body {
+    background-color: rgba(0,0,0,.8);
+    color: #fff;
+    font-family: 'Raleway', sans-serif;
+}
+
+#panthera-debate-club {
+    /* position: relative; */
+    /* margin-top: 15pc; */
+}
+
+#panthera-debate-club img {
+    /* display: inline-block;
+    border-radius: 25px; */
+}
+
+#panthera-debate-club .introduce {
+    /* position: absolute;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 99%; */
+}
+
+#panthera-debate-club h1,
+#panthera-debate-club .desciption {
+    /* padding: 0 50px; */
+}
+
+#panthera-debate-club .desciption {
+    font-size: 23px;
+}
+
+/* ANCHOR Contact */
+#contact {
+    height: 500px;
 }
 
 #footer {
 
+}
+
+
+
+/* CSS of JAVASCRIPT */
+.hidden {
+    opacity: 0;
+}
+
+.backgroundColorHeader {
+    background-color: #04647c;
+}
+
+.menuHover {
+    background-color: #faaa2c;
+    cursor: pointer;
 }
