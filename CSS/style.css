@@ -4,6 +4,7 @@
     transition: 0.3s ease-in-out, transform 0.3s ease-in-out;
     position: relative;
     position: fixed;
+    /* min-width: 900px; */
     display: flex;
     height: 100px;
     width: 100%;
@@ -12,12 +13,12 @@
 }
 
 #header .logo {
-    margin-left: 15pc;
+    margin-left: 20vw;
     cursor: pointer;
 }
 
 #nav {
-    margin-right: 15pc;
+    margin-right: 20vw;
     position: absolute;
     font-size: 0;
     right: 0;
@@ -52,14 +53,14 @@
 /* ANCHOR Slider */
 #slider {
     width: 100%;
-    height: 48vw;
+    height: 48.14vw;
     position: relative;
     background-size: cover;
     background-position: center;
     background-image: url(../Image/TQTCrew.jpg);
 }
 
-#slider::after {
+#slider::before {
     content: '';
     position: absolute;
     z-index: 1;
@@ -70,72 +71,301 @@
     background-color: rgba(0,0,0,0.6);
 }
 
-#slider .slider-content {
+#slider .scroll-mouse {
     position: absolute;
-    z-index: 20;
-    color: #fff;
-    bottom: 0;
-    width: 100%;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    transform: translateX(-50%);
+    width: 23px;
+    height: 40px;
+    border: 2px solid #fff;
+    border-radius: 15px;
     text-align: center;
-    justify-content: center;
 }
 
-#slider img {
-    object-fit: contain;
-    position: relative;
-    height: 100%;
-    width: 100%;
-    /* background-color: #222629;    */    
+#slider .scroll-mouse i {
+    color: #fff;
+    font-size: 5px;
+    animation: move 1s infinite;
+}
+@keyframes move {
+    0% {
+        transform: translateY(0);
+    }100% {
+        transform: translateY(200%);
+    }
 }
 
-#slider .opacity-container {
-    /* position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%; */
-    /* background-color: rgba(0,0,0,.5); */
-}
+/* #slider::after {
+    position: absolute;
+    content: '';
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 40px;
+    border: 2px solid #fff;
+    border-radius: 15px;
+} */
 
 /* ANCHOR Body */
 #body {
     background-color: rgba(0,0,0,.8);
     color: #fff;
     font-family: 'Raleway', sans-serif;
+    padding-top: 85px;
+    padding-bottom: 85px;
 }
 
-#panthera-debate-club {
-    /* position: relative; */
-    /* margin-top: 15pc; */
+#body h2,
+#body .slogan {
+    text-align: center;
 }
 
-#panthera-debate-club img {
-    /* display: inline-block;
-    border-radius: 25px; */
+
+#body h2 {
+    font-size: 50px;
+    font-weight: 400;
 }
 
-#panthera-debate-club .introduce {
-    /* position: absolute;
-    display: inline-flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 99%; */
+#body .slogan {
+    margin-top: 30px;
+    margin-bottom: 40px;
 }
 
-#panthera-debate-club h1,
-#panthera-debate-club .desciption {
-    /* padding: 0 50px; */
+.clubs {
+    position: relative;
+    padding: 10px 0;
 }
 
-#panthera-debate-club .desciption {
-    font-size: 23px;
+/* NOTE Kĩ thuật Clearfix */
+.clubs::before {
+    content: '';
+    background-color: #fff;
+    margin-left: -1.5px;
+    position: absolute;
+    width: 2px;
+    bottom: 0;
+    left: 50%;
+    top: 0;
+}
+
+.clubs::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.clubs li {
+    list-style: none;
+    margin-bottom: 30px;
+    /* float: left;
+    clear: left; */
+    width: 50%;
+    /* transition: .5s; */
+}
+
+.clubs > li > .Club {
+    transition: .5s;
+}
+
+.clubs > li::before,
+.clubs > li::after {
+    content: '';
+    display: table;
+}
+
+.clubs li:hover .Club {
+    background: #04647c;
+}
+
+.clubs li:hover .point-line {
+    color: #04647c;
+}
+
+.clubs li:hover .Club::after {
+    border-left-color: #04647c;
+    border-right-color: #04647c;
+}
+
+.clubs > li::after {
+    clear: both;
+}
+
+/* ANCHOR General CSS of club (Left & Right) */
+.left-content {
+    float: left;
+    clear: left;
+    position: relative;
+}
+
+.right-content {
+    float: right;
+    clear: right;
+    position: relative;
+}
+
+/* ANCHOR General CSS content club */
+.clubs .Club {
+    width: 90%;
+    float: left;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 12px 40px;
+    border-radius: 5px;
+    position: relative;
+    text-align: center;
+    padding-bottom: 25px;
+}
+
+.clubs > li > .Club::after {
+    position: absolute;
+    top: 27px;
+    right: -14px;
+    display: inline-block;
+    border-top: 14px solid transparent;
+    border-left: 14px solid rgba(255, 255, 255, 0.1);
+    border-right: 0 solid rgba(255, 255, 255, 0.1);
+    border-bottom: 14px solid transparent;
+    content: " ";
+    transition: .5s;
+}
+
+.clubs img {
+    width: 100%;
+    padding-top: 10px;
+}
+
+/* NOTE Point Left */
+.clubs .point-line {
+    color: #b2b2b2;
+    width: 24px;
+    height: 24px;
+    line-height: 50px;
+    text-align: center;
+    position: absolute;
+    top: 16px;
+    right: -12px;
+    z-index: 1;
+    transition: .5s;
+}
+/* NOTE Point Right */
+.clubs .right-content .point-line {
+    left: -12px;
+}
+
+/* ANCHOR Panthera Debate Club */
+.panthera-debate-club {
+    
+}
+
+.panthera-debate-club img {
+    width: 100%;
+    padding-top: 10px;
+}
+
+.panthera-debate-club::after {
+    
+}
+
+.panthera-debate-club .content-club1 {
+
+}
+
+/* ANCHOR Dance Club */
+.dance-club {
+    margin-top: 85px;
+}
+
+.right-content > .Club::after {
+    border-left-width: 0!important;
+    border-right-width: 14px!important;
+    left: -14px;
+    right: auto!important;
+}
+
+.dance-club .content-club2 {
+    float: right;
+}
+
+.art-club {
+
+}
+
+.basketball-club .content-club4 {
+    float: right;
 }
 
 /* ANCHOR Contact */
 #contact {
+    text-align: center;
+    padding-top: 85px;
+    padding-bottom: 85px;
     height: 500px;
 }
 
+#contact h2 {
+    font-size: 50px;
+    font-weight: 400;
+}
+
+#contact .contact-input {
+    float: left;
+    padding: 0 15px;
+}
+
+#contact .info-input {
+
+}
+
+#contact .contact-input input {
+    width: 100%;
+    padding: 12px 12px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    transition: .3s ease-in-out;
+}
+
+#message:focus,
+#contact .contact-input input:focus {
+    border-color: #04647c;
+    outline: 0;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(4, 100, 124, .6);
+}
+
+#contact .message-input {
+    margin-top: 30px;
+    width: 100%;
+}
+
+#message{
+    resize: none;
+    width: 100%;
+    min-height: 200px;
+    padding: 20px 12px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    transition: .3s ease-in-out;
+}
+
+#contact .button {
+    position: relative;
+    padding: 16px 50px;
+    margin-top: 25px;
+    border: 2px solid #04647c;
+    color: #04647c;
+    background-color: #fff;
+    overflow: hidden;
+    transition: .3s ease-in-out;
+}
+
+#contact .button:hover {
+    background-color: #04647c;
+    color: #fff;
+}
+
+/* ANCHOR Footer */
 #footer {
 
 }

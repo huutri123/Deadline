@@ -6,7 +6,6 @@
     <link rel="stylesheet" href="./CSS/base.css">
     <link rel="stylesheet" href="./CSS/style.css">
     <link rel="stylesheet" href="./themify-icons/themify-icons.css">
-    <title>Club TQT</title>
 </head>
 <body>
     <!-- ANCHOR Header -->
@@ -25,47 +24,83 @@
 
     <!-- ANCHOR Slider -->
     <div id="slider">
-        <!-- <img src="./Image/TQTCrew.jpg" alt=""> -->
-        <div class="slider-content">
-            <h2>TQT Crew</h2>
+        <div class="scroll-mouse">
+            <i class="fas fa-circle"></i>
         </div>
     </div>
 
     <!-- ANCHOR Body -->
     <div id="body" class="padding-content">
-        <!-- ANCHOR Panthera Debate Club -->
-        <div id="panthera-debate-club">
-            <img class="col2" src="./Image/Panthera debate club.png" alt="">
-            <div class="introduce col2">
-                <h1>PANTHERA DEBATE CLUB</h1>
-                <p class="desciption">
-                    Với sự đam mê khám phá thế giới tâm linh mãnh
-                     liệt và khao khát tìm hiểu về năng lượng vô
-                      hình đang ẩn giấu quanh mình, cô bé đã tìm
-                       ra Auralite 23 – một loại đá huyền bí, 
-                       được cho là mạnh mẽ nhất, đại diện cho sự 
-                       toàn năng của trí tuệ và thể chất với sự kết 
-                       hợp của 23 hợp chất khác nhau:...
-                </p>
-                <a href="" class="moreInfoClub">Tìm hiểu thêm</a>
-            </div>
-        </div>
+        <h2>TQT Clubs</h2>
+        <p class="slogan">Slogan</p>
 
-        <!-- ANCHOR TQT Dance Team -->
-        <div class="dance-club">
-            <h1>TQT DANCE CLUB</h1>
+        <!-- Clubs -->
+        <ul class="clubs">
+            <!-- ANCHOR Panthera Debate Club -->
+            <li class="panthera-debate-club left-content js-club">
+                <div class="point-line">
+                    <i class="fas fa-circle"></i>
+                </div>
+                <div class="content-club1 Club">
+                    <h3>PANTHERA DEBATE CLUB</h3>
+                    <img src="./Image/Panthera debate club.png" alt="">
+                </div>
+            </li>
 
-        </div>
+            <!-- ANCHOR Dance Club (TQT Crew) -->
+            <li class="dance-club right-content js-club">
+                <div class="point-line">
+                    <i class="fas fa-circle"></i>
+                </div>
+                <div class="content-club2 Club">
+                    <h3>DANCE CLUB</h3>
+                    <img src="./Image/TQT Dance.jpg" alt="">
+                </div>
+            </li>
 
-        <!-- ANCHOR TQT Art Club -->
-        <div class="art-club">
-            <h1>TQT ART CLUB</h1>
-        </div>
+            <!-- ANCHOR Art Club -->
+            <li class="art-club left-content js-club">
+                <div class="point-line">
+                    <i class="fas fa-circle"></i>
+                </div>
+                <div class="content-club3 Club">
+                    <h3>ART CLUB</h3>
+                    <img src="./Image/Art Club.jpg" alt="">
+                </div>
+            </li>
+
+            <li class="basketball-club right-content js-club">
+                <div class="point-line">
+                    <i class="fas fa-circle"></i>
+                </div>
+                <div class="content-club4 Club">
+                    <h3>BASKETBALL CLUB</h3>
+                    <img src="./Image/Basketball Club.jpg" alt="">
+                </div>
+            </li>
+        </ul>
     </div>
 
     <!-- ANCHOR Contact -->
-    <div id="contact">
+    <div id="contact" class="padding-content">
+        <h2>Contact Us</h2>
+        <hr>
+        <div class="contact-input col3 info-input">
+            <input type="text" id="name" placeholder="Name">
+        </div>
 
+        <div class="contact-input col3 info-input">
+            <input type="email" id="email" placeholder="Email">
+        </div>
+
+        <div class="contact-input col3 info-input">
+            <input type="text" id="phone" placeholder="Phone">
+        </div>
+
+        <div class="contact-input message-input">
+            <textarea name="message" rows="7" id="message" placeholder="Message" required="required"></textarea>
+        </div>
+        <button class="button">SUBMIT</button>
     </div>
 
     <!-- ANCHOR Footer -->
@@ -73,6 +108,30 @@
 
     </footer>
 
+
+
+
+    <!-- Panthera Debate Club Page -->
+    <div id="panthera-debate-club-index">
+
+    </div>
+
+    <!-- Dance Club Page -->
+    <div id="dance-club-index">
+        
+    </div>
+
+    <!-- Art Club Page -->
+    <div id="art-club-index">
+        
+    </div>
+
+    <!-- Basketball Club Page -->
+    <div id="basketball-club-index">
+        
+    </div>
+
     <script src="./Js/JavaScript.js"></script>
+    <script src="https://kit.fontawesome.com/f9c1e2c452.js" crossorigin="anonymous"></script>    <title>Club TQT</title>
 </body>
 </html>

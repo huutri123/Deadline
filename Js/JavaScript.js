@@ -19,12 +19,22 @@ var dk = 0;
 for (const element of elements) {
     element.addEventListener('mouseover', function() {
         if (dk > 0) {
-            // console.log('1')
             element.classList.add('menuHover');
         }
     });
     
     element.addEventListener('mouseout', function() {
         element.classList.remove('menuHover');
+    });
+}
+
+
+
+const clubs = document.querySelectorAll('.js-club');
+
+for (const club of clubs) {
+    club.addEventListener('click', function() {
+        // club.classList.toggle('clubActive');
+        console.log('Click')
     });
 }

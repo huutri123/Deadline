@@ -1,19 +1,26 @@
 * {
     padding: 0;
-    border: 0;
+    /* border: 0; */
     margin: 0;
+    box-sizing: border-box;
 }
 
 html {
-    font-family: "Lato", sans-serif;
+    font-family: 'Raleway', sans-serif;
+}
+
+hr {
+    width: 96px;
+    border: 1px solid #1b1b1b;
+    margin: 30px auto 30px;
 }
 
 .margin-content {
-    margin: 0 15pc;
+    margin: 0 20vw;
 }
 
 .padding-content {
-    padding: 0 15pc;
+    padding: 0 20vw;
 }
 
 .col2 {
@@ -21,5 +28,5 @@ html {
 }
 
 .col3 {
-
+    width: calc(100% / 3);
 }
