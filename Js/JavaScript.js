@@ -35,6 +35,17 @@ const clubs = document.querySelectorAll('.js-club');
 for (const club of clubs) {
     club.addEventListener('click', function() {
         // club.classList.toggle('clubActive');
-        console.log('Click')
+        alert('Chưa làm phần này.')
+    });
+}
+
+function scrollToBody() {
+    const headerHeight = document.querySelector('#header').offsetHeight;
+    const bodyTarget = document.querySelector('#body');
+    const targetPosition = bodyTarget.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+    
+    window.scrollTo({
+        top: targetPosition,
+        behavior: 'smooth'
     });
 }
